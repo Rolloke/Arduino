@@ -3,7 +3,7 @@
 
 /*
  * Melody.h - library for playing melodies
- * The library plays the tones of a melody asynchronously controled by
+ * The library plays the tones of a melody asynchronously controlled by
  * repeatedly calling the tick(..) function within the function loop().
  */
 #include <inttypes.h>
