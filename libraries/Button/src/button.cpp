@@ -83,7 +83,7 @@ void Button::setDeBounce(int aDeBounce_ms)
 }
 
 // \brief controlles trigger events of a button
-// fNow current time determined by millis()
+// @param fNow current time determined by millis()
 void Button::tick(unsigned long fNow)
 {
     if (isPressed())
