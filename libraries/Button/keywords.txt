@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Map For Button
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Button  KEYWORD1    Button
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setRepeat   KEYWORD2 
+setDelay    KEYWORD2
+setDeBounce KEYWORD2
+tick    KEYWORD2
+nameOf  KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+Button::released  KEYWORD2
+Button::pressed  KEYWORD2
+Button::fired  KEYWORD2
+Button::delayed  KEYWORD2
+Button::repeated  KEYWORD2
+
