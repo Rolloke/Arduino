@@ -2,11 +2,6 @@
 #include <Arduino.h>
 
 
-// \brief constructor with parameters
-// outputPin No
-// pTones array with tones
-// repeats of melody
-// tone_ms length of a full tone
 Melody::Melody(uint8_t outputPin, Tone* pTones, uint8_t repeats, unsigned long tone_ms):
   mOutputPin(outputPin)
 , mRepeats(repeats)
@@ -21,8 +16,6 @@ Melody::Melody(uint8_t outputPin, Tone* pTones, uint8_t repeats, unsigned long t
 {
 }
 
-// \brief controlles playing the melody using current time ticks
-// fNow_ms current time determined by millis()
 void Melody::tick(unsigned long fNow_ms)
 {
   unsigned long fStep_ms = fNow_ms - mLast_ms;
@@ -57,15 +50,11 @@ void Melody::tick(unsigned long fNow_ms)
   }
 }
 
-// \brief sets a new array of tones
-// aTones Array with tones and time description
-// \hint the last entry must contain zeros
 void Melody::setTones(Tone* aTones)
 {
     mpTones = aTones;
 }
 
-// \brief starts playing the melody
 void Melody::startMelody()
 {
   mCurrent_ms = 0;
@@ -75,13 +64,11 @@ void Melody::startMelody()
   mToneOn = 0;
 }
 
-// \brief stops playing the melody
 void Melody::stopMelody()
 {
   mCurrentRepeat = mRepeats;
 }
 
-// \brief determines status of playing
 bool Melody::isPlaying()
 {
   return mCurrentRepeat != mRepeats;

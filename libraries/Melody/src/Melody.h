@@ -1,9 +1,9 @@
 #ifndef Melody_h
 #define Melody_h
 
-/*
+/*!
  * Melody.h - library for playing melodies
- * The library plays the tones of a melody asynchronously controlled by
+ * The library plays the tones of a melody asynchronously controled by
  * repeatedly calling the tick(..) function within the function loop().
  */
 #include <inttypes.h>
@@ -18,12 +18,31 @@ typedef struct
 class Melody
 {
 public:
+    //! @brief constructor with parameters
+    //! @param outputPin No
+    //! @param pTones array with tones zero terminated, see structure tones
+    //! @note the last entry must contain zeros
+    //! @param repeats of melody
+    //! @param tone_ms length of a full tone
     Melody( uint8_t outputPin, Tone* pTones, uint8_t repeats, unsigned long tone_ms);
 
+    //! @brief controles events to play the melody
+    //! @param fNow_ms current time determined by millis()
+    //! @note must be called repeatedly within loop()
     void tick(unsigned long fNow_ms);
+
+    //! @brief starts playing the melody
     void startMelody();
+
+    //! @brief stops playing the melody
     void stopMelody();
+
+    //! @brief determines, if melody playing is active
     bool isPlaying();
+
+    //! @brief sets a new array with tones
+    //! @param pTones array with tones zero terminated, see structure tones
+    //! @note the last entry must contain zeros
     void setTones(Tone* aTones);
 
 private:
