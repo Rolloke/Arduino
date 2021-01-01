@@ -1,0 +1,40 @@
+#######################################
+# Syntax Coloring Map For TextMenu
+#######################################
+
+#######################################
+# Class (KEYWORD1)
+#######################################
+MenuItem KEYWORD1 MenuItem
+ItemSelect KEYWORD1 ItemSelect
+ItemValue KEYWORD1 ItemValue
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+getText KEYWORD2
+getPath KEYWORD2  
+pressBtn KEYWORD2
+setNotificationFunction KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+MenuItem::dir::left LITERAL1
+MenuItem::dir::right LITERAL1
+MenuItem::dir::up LITERAL1
+MenuItem::dir::down LITERAL1
+MenuItem::dir::enter LITERAL1
+MenuItem::dir::escape LITERAL1
+MenuItem::dir::begin_edit LITERAL1
+MenuItem::dir::text LITERAL1
+MenuItem::dir::unknown LITERAL1
+MenuItem::submenu    LITERAL1
+MenuItem::edit       LITERAL1
+MenuItem::editable   LITERAL1
+MenuItem::command    LITERAL1
+MenuItem::limit_turn LITERAL1
+MenuItem::float_val  LITERAL1
+MenuItem::no_cursor  LITERAL1
+
+
