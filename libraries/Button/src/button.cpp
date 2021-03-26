@@ -13,15 +13,7 @@ Button::Button(uint8_t aPin, fTriggerFunc anEventFnc, uint8_t aHighlevel) :
   , mNoOfPins(0)
   , mHighLevel(aHighlevel)
 {
-    if (mHighLevel == HIGH)
-    {
-        pinMode(mPin, INPUT);
-    }
-    else
-    {
-        pinMode(mPin, INPUT_PULLUP);
-        digitalWrite(mPin, HIGH);
-    }
+    setPin(aPin);
 }
 
 Button::Button(uint8_t* aPins, uint8_t aNoOfPins, fTriggerFunc anEventFnc, uint8_t aHighlevel) :
@@ -36,18 +28,7 @@ Button::Button(uint8_t* aPins, uint8_t aNoOfPins, fTriggerFunc anEventFnc, uint8
   , mNoOfPins(aNoOfPins)
   , mHighLevel(aHighlevel)
 {
-    for (uint8_t fPin=0; fPin<aNoOfPins; ++fPin)
-    {
-        if (mHighLevel == HIGH)
-        {
-            pinMode(mPins[fPin], INPUT);
-        }
-        else
-        {
-            pinMode(mPins[fPin], INPUT_PULLUP);
-            digitalWrite(mPins[fPin], HIGH);
-        }
-    }
+    setPins(mPins, mNoOfPins);
 }
 
 void Button::setRepeat(int aRepeat_ms)
@@ -63,6 +44,45 @@ void Button::setDelay(int aDelay_ms)
 void Button::setDeBounce(int aDeBounce_ms)
 {
     mDeBounce_ms = aDeBounce_ms;
+}
+
+bool Button::setPin(uint8_t aPin)
+{
+    if (mPins == 0)
+    {
+        mPin = aPin;
+        if (mHighLevel == HIGH)
+        {
+            pinMode(mPin, INPUT);
+        }
+        else
+        {
+            pinMode(mPin, INPUT_PULLUP);
+            digitalWrite(mPin, HIGH);
+        }
+    }
+    return mPins == 0;
+}
+
+bool Button::setPins(uint8_t *aPins, uint8_t aNoOfPins)
+{
+    if (mPin == 0)
+    {
+        mPins = aPins;
+        for (uint8_t fPin=0; fPin<aNoOfPins; ++fPin)
+        {
+            if (mHighLevel == HIGH)
+            {
+                pinMode(mPins[fPin], INPUT);
+            }
+            else
+            {
+                pinMode(mPins[fPin], INPUT_PULLUP);
+                digitalWrite(mPins[fPin], HIGH);
+            }
+        }
+    }
+    return mPin == 0;
 }
 
 void Button::tick(unsigned long fNow)

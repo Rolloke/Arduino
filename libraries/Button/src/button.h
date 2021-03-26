@@ -52,8 +52,20 @@ public:
   //! @note must be called repeatedly within loop()
   void tick(unsigned long fNow);
 
+  //! @brief sets new pin number
+  //! @param aPin Arduino pin number
+  //! @return success of altering pin
+  bool setPin(uint8_t aPin);
+
+  //! @brief sets new pin numbers
+  //! @param aPin array with Arduino pin numbers
+  //! @param aNoOfPins size of the array with pin numbers
+  //! @return success of altering pins
+  bool setPins(uint8_t* aPins, uint8_t aNoOfPins);
+
   //! @brief delivers the name of the button state
   //! @param aState button state
+  //! @return name of state
   static const char* nameOf(eState aState);
 
   
