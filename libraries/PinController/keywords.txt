@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For Melody
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PinController  KEYWORD1    Tone
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+start   KEYWORD2 
+stop    KEYWORD2
+isPlaying KEYWORD2
+tick    KEYWORD2
+setPinCommands  KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+

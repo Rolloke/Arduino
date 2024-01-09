@@ -1,0 +1,115 @@
+Konfigurierung des Arduino Switch
+
+? = Werteabfrage
+: = Gruppentrenner
+
+CONFIG
+HELP
+
+[n] = Nummer des Pins, Output, Input
+
+PIN
+
+INPUT
+- THRESHOLD
+- PULLUP
+- EDGE
+  - RISING
+  - FALLING
+  - NONE
+
+OUTPUT
+- INVERT
+- STOP
+- DELAY:ms
+- PULSE:ms
+- REPEAT:n
+- TOGGLE
+
+INPUT / OUTPUT
+- CONNECT
+- BINARY
+- ANALOG
+- VALUE:0-4096
+
+
+Output:
+// initialize pin with arduino pin number as binary or analog output pin
+OUTPUT[1]:PIN[12]:BINARY|ANALOG
+// invert output pin
+OUTPUT[1]:INVERT:1
+// repeat output pin: needs DELAY and PULSE times
+OUTPUT[1]:REPEAT:-1,0,..,2^31
+// stop repeat output pin
+OUTPUT[1]:STOP:
+// set delay time of output pin in ms
+OUTPUT[1]:DELAY:0-2^16 ms
+// set pulse time of output pin in ms
+OUTPUT[1]:PULSE:0-2^16 ms
+// connect output pin to following output
+OUTPUT[1]:CONNECT:OUTPUT[2]
+// set value of output pin
+OUTPUT[1]:VALUE:n
+// read value of output pin
+OUTPUT[1]:VALUE?
+// read informations about output pin
+OUTPUT[1]:?
+
+Input:
+// initialize pin with arduino pin number as binary or analog input pin
+// or as Input with internal pullup resistor for a switch to ground
+INPUT[1]:PIN[11]:BINARY|ANALOG|PULLUP
+// connect output pin to input
+INPUT[1]:CONNECT:OUTPUT[1]
+// set rising edge to trigger only if value changes
+INPUT[1]:EDGE:RISING|FALLING|NONE
+// set threshold to trigger only if value changes
+INPUT[1]:THRESHOLD:n
+// debounce time for switch with pullup
+INPUT[1]:PULSE:ms
+// delay time for repetition of switch pulse
+INPUT[1]:DELAY:ms
+// repetition time for repetition of switch pulse
+// or poll time for analog input with report to serial interface
+INPUT[1]:REPEAT:ms
+// report input change to serial interface
+INPUT[1]:REPORT:1|0
+// read value of input pin
+INPUT[1]:VALUE?
+// read informations about output pin
+INPUT[1]:?
+
+
+
+
+Keywords:|CONFIG|PIN|INPUT|OUTPUT|INVERT|REPEAT|STOP|DELAY|PULSE|BINARY|ANALOG|VALUE|CONNECT|EDGE|RISING|FALLING|RESET|THRESHOLD|HELP|
+Pins: 14 DIO 5V, 40 mA, 8 Analog input
+- 0:DIO:RX
+- 1:DIO:TX
+- 2:DIO:   :ExtInt
+- 3:DIO:PWM:ExtInt
+- 4:DIO:   :SDA
+- 5:DIO:PWM:SCL
+- 6:DIO:PWM
+- 9:DIO:PWM
+-10:DIO:PWM:SS
+-11:DIO:PWM:MOSI
+-12:DIO:   :MISO
+-13:DIO:   :SCK:LED
+-14:DIO:A0
+-15:DIO:A1
+-16:DIO:A2
+-17:DIO:A3
+-18:DIO:A4
+-19:DIO:A5
+-20:   :A6
+-21:   :A7
+Usage:
+OUTPUT[1]:PIN[13]:BINARY|ANALOG
+INPUT[1]:PIN[12]:BINARY|ANALOG
+-BINARY: DIO
+-ANALOG: Input A0-A7
+ or Output PWM 
+-OUTPUT[n]:?/INVERT/DELAY:ms/PULSE:ms/VALUE:0-4096,?/REPEAT:m
+-INPUT[n]:?/EDGE:RISING|FALLING/THRESHOLD:0-4096/VALUE:?/CONNECT:OUTPUT[m]
+
