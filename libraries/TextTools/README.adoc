@@ -1,4 +1,4 @@
-= TextMenu Library for Arduino =
+= TextTools Library for Arduino =
 
 The TextTools library provides some text tools for a line parser to parse commands
 with the following syntax e.g.: KEYWORD1[1]:KEYWORD2:KEYWORD3:NUMBER
