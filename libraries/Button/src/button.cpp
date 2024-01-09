@@ -14,6 +14,7 @@ Button::Button(uint8_t aPin, fTriggerFunc anEventFnc, uint8_t aHighlevel) :
   , mHighLevel(aHighlevel)
 {
     setPin(aPin);
+    // test
 }
 
 Button::Button(uint8_t* aPins, uint8_t aNoOfPins, fTriggerFunc anEventFnc, uint8_t aHighlevel) :
