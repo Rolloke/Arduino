@@ -6,19 +6,48 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-PinController  KEYWORD1    Tone
+TimerController  KEYWORD1    
+DigitalPinController KEYWORD1
+Function KEYWORD1
+AnalogPinController KEYWORD1
+TimerFunction KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-start   KEYWORD2 
-stop    KEYWORD2
+# TimerController, base class
+start     KEYWORD2 
+stop      KEYWORD2
 isPlaying KEYWORD2
-tick    KEYWORD2
-setPinCommands  KEYWORD2
+
+# DigitalPinController
+tick           KEYWORD2
+setCommands    KEYWORD2
+setFlags       KEYWORD2
+setCommonDelay KEYWORD2
+set_all_pins   KEYWORD2
+
+# AnalogPinController
+tick                  KEYWORD2
+setFunctions          KEYWORD2
+set_value_of_all_pins KEYWORD2
+
+# TimerFunction
+tick             KEYWORD2
+setTimerFunction KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-
+Function::none             LITERAL1
+Function::set_start_value  LITERAL1
+Function::linear_ramp      LITERAL1
+Function::constant         LITERAL1
+Function::sine             LITERAL1
+Function::sine_half_1      LITERAL1
+Function::sine_half_2      LITERAL1
+Function::sine_quater_1    LITERAL1
+Function::sine_quater_2    LITERAL1
+Function::sine_quater_3    LITERAL1
+Function::sine_quater_4    LITERAL1

@@ -30,7 +30,7 @@ void setup()
 
 void loop() 
 {
-  // the button uses ticks in ms for working
+  // the melody module uses ticks in ms for working
   unsigned long fNow = millis();
   gMelody.tick(fNow);  
 }

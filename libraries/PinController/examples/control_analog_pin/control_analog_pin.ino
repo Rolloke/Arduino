@@ -33,7 +33,7 @@ void setup()
 
 void loop() 
 {
-  // the button uses ticks in ms for working
+  // the AnalogPinController uses ticks in ms for working
   unsigned long fNow = millis();
   gAnalogPin.tick(fNow);
 }

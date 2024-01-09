@@ -56,8 +56,6 @@ private:
     uint16_t mCurrentTone;
     uint8_t mToneOn;
     uint16_t mTone_ms;
-    unsigned long mLast_ms;
-    unsigned long mCurrent_ms;
     unsigned long mNextTime_ms;
 };
 

@@ -72,7 +72,7 @@ void setup()
 
 void loop() 
 {
-  // the button uses ticks in ms for working
+  // the DigitalPinController uses ticks in ms for working
   unsigned long fNow = millis();
   gPinControl.tick(fNow);
 }

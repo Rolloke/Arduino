@@ -10,18 +10,13 @@ Melody::Melody(uint8_t outputPin, Tone* pTones, uint8_t repeats, unsigned long t
 , mCurrentTone(0)
 , mToneOn(0)
 , mTone_ms(tone_ms)
-, mLast_ms(0)
-, mCurrent_ms(0)
 , mNextTime_ms(0)
 {
 }
 
-void Melody::tick(unsigned long fNow_ms)
+void Melody::tick(unsigned long current_ms)
 {
-  unsigned long fStep_ms = fNow_ms - mLast_ms;
-  mLast_ms = fNow_ms;
-  mCurrent_ms += fStep_ms;
-  if (mCurrent_ms > mNextTime_ms && mCurrentRepeat < mRepeats)
+  if (current_ms > mNextTime_ms && mCurrentRepeat < mRepeats)
   {
     if (mpTones != 0 && (mpTones[mCurrentTone].mTone != 0 || mpTones[mCurrentTone].mCnt != 0))
     {
@@ -33,7 +28,7 @@ void Melody::tick(unsigned long fNow_ms)
           tone(mOutputPin, mpTones[mCurrentTone].mTone, fLength_ms);
         }
         mToneOn = 1;
-        mNextTime_ms = mCurrent_ms + fLength_ms;
+        mNextTime_ms = current_ms + fLength_ms;
       }
       else
       {
@@ -57,8 +52,6 @@ void Melody::setTones(Tone* aTones)
 
 void Melody::startMelody()
 {
-  mCurrent_ms = 0;
-  mNextTime_ms = 0;
   mCurrentRepeat = 0;
   mCurrentTone = 0;
   mToneOn = 0;
