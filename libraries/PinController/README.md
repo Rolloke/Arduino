@@ -1,4 +1,4 @@
-= PinController Library for Arduino =
+## PinController Library for Arduino 
 
 The PinController library to control digital and analog pins.
 - switch on or of groups of pins
@@ -8,7 +8,7 @@ The PinController library to control digital and analog pins.
   - several contant values
 
 
-== License ==
+### License
 
 Copyright (c) 2018 RkeSoft LLC. All right reserved.
 

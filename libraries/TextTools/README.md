@@ -1,4 +1,4 @@
-= TextTools Library for Arduino =
+## TextTools Library for Arduino 
 
 The TextTools library provides some text tools for a line parser to parse commands
 with the following syntax e.g.: KEYWORD1[1]:KEYWORD2:KEYWORD3:NUMBER
@@ -12,7 +12,7 @@ with the following syntax e.g.: KEYWORD1[1]:KEYWORD2:KEYWORD3:NUMBER
   Prints a floating point value into a String object with a given number of 
   pre and post comma leading zeros.
 
-== License ==
+### License 
 
 Copyright (c) 2018 RkSoft LLC. All right reserved.
 

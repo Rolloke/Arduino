@@ -1,9 +1,9 @@
-= TextMenu Library for Arduino =
+## TextMenu Library for Arduino
 
 The TextMenu library simplifies realization of a text based menu.
 
 
-== License ==
+### License 
 
 Copyright (c) 2018 RkSoft LLC. All right reserved.
 

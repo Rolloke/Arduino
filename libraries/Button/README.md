@@ -1,9 +1,12 @@
-= Button Library for Arduino =
+## Button Library for Arduino 
 
 The Button library simplifies button implementation.
+- variable debounce time
+- optional variable delay for repeat function
+- optional variable repeatition time
+- single or multiple buttons
 
-
-== License ==
+### License 
 
 Copyright (c) 2018 RkeSoft LLC. All right reserved.
 

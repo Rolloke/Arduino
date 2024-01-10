@@ -1,9 +1,9 @@
-= Melody Library for Arduino =
+## Melody Library for Arduino
 
 The Melody library simplifies playing a melody.
 
 
-== License ==
+### License 
 
 Copyright (c) 2018 RkeSoft LLC. All right reserved.
 
