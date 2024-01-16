@@ -8,4 +8,4 @@ The Button library simplifies button implementation.
 
 ### License 
 
-see File: LICENSE
+see File: [LICENSE](../../LICENSE.md)
