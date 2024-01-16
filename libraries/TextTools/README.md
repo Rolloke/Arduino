@@ -14,5 +14,5 @@ with the following syntax e.g.: KEYWORD1[1]:KEYWORD2:KEYWORD3:NUMBER
 
 ### License 
 
-see File: LICENSE
+see File: [LICENSE](../../LICENSE.md)
 

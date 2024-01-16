@@ -5,5 +5,5 @@ The TextMenu library simplifies realization of a text based menu.
 
 ### License 
 
-see File: LICENSE
+see File: [LICENSE](../../LICENSE.md)
 

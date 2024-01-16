@@ -10,5 +10,5 @@ The PinController library to control digital and analog pins.
 
 ### License 
 
-see File: LICENSE
+see File: [LICENSE](../../LICENSE.md)
 

@@ -5,4 +5,4 @@ The Melody library simplifies playing a melody.
 
 ### License 
 
-see File: LICENSE
+see File: [LICENSE](../../LICENSE.md)
