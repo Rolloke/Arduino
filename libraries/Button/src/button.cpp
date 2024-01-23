@@ -131,11 +131,9 @@ void Button::tick(unsigned long fNow)
     }
     else
     {
-        if (mPin != 0 &&
-            (   (mDelay_ms == 0 && mState == fired )
+        if (    (mDelay_ms == 0 && mState == fired )
              || (mDelay_ms  > 0 && mState == delayed)
-             || (mRepeat_ms > 0 && mState == repeated )
-            ))
+             || (mRepeat_ms > 0 && mState == repeated ))
         {
             (*triggerEvent)(released, mPin);
         }

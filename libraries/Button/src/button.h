@@ -13,6 +13,7 @@
 //! @brief signature of the trigger function
 //! @param aState state of the pressed button, see enum eState 
 //! @param aPin number of the pin or bit mask with set bits according to the array position
+//! @note for mutliple buttons the release signal has no information about released pin
 typedef void (*fTriggerFunc)(uint8_t aState, uint8_t aPin);
 
 class Button
