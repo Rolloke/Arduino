@@ -436,7 +436,10 @@ void loop()
 
 void triggerButton(uint8_t aState, uint8_t aPin) 
 {
-#ifndef EMULATED
+#ifdef EMULATED
+    (void) aState;
+    (void) aPin;
+#else
     bool button_pressed = aState == Button::pressed;
     int mouseX = 0;
     int mouseY = 0;

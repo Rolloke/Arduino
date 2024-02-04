@@ -174,13 +174,17 @@ MenuItem::dir::to toMenuBtn(uint8_t aPin)
 
 void triggerButton(uint8_t aState, uint8_t aPin)
 {
+    MenuItem::dir::to  menu_btn = toMenuBtn(aPin);
     switch (aState)
     {
     case Button::pressed:
     case Button::delayed:
     case Button::repeated:
-        getMenu().pressBtn(toMenuBtn(aPin));
-        displayMenuItem();
+        if (menu_btn)
+        {
+            getMenu().pressBtn(menu_btn);
+            displayMenuItem();
+        }
         break;
     }
 }
