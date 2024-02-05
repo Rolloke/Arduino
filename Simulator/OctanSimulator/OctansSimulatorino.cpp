@@ -1,7 +1,7 @@
 #include <Arduino.h>
-#include <ui_mainwindow.h>
 
 #include "../../Sketches/OctansSimulator/OctansSimulatorDisplay/OctansSimulatorDisplay.ino"
+#include <ui_mainwindow.h>
 
 void initialize(Ui_MainWindow *ui)
 {
