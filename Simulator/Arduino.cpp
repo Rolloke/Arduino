@@ -96,12 +96,12 @@ int  getFirstAnalogPin()
 
 void attachInterrupt(int /* aInterrupt */, InterrupFunction /* aFunction */, int /* aInterruptMode */)
 {
-    // todo!
+    // TODO: implement
 }
 
 void detachInterrupt(int /* aInterrupt */)
 {
-    // todo!
+    // TODO: implement
 }
 
 bool isAlphaNumeric(int aChar)

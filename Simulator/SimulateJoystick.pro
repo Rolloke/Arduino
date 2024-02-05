@@ -3,7 +3,7 @@
 # Project created by QtCreator 2019-04-30T17:58:23
 #
 #-------------------------------------------------
-include (SimulateArduino.pro)
+include (ArduinoSimulator.pro)
 
 EMULATED=1
 DEFINES += EMULATED

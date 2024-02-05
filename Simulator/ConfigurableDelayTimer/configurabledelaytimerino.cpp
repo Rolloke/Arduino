@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <unittest.h>
 
-#include "../../../Arduino/Sketches/ConfigurableDelayTimer/ConfigurableDelayTimer.ino"
+#include "../../Sketches/ConfigurableDelayTimer/ConfigurableDelayTimer.ino"
 #include "ui_mainwindow.h"
 
 void initialize(Ui_MainWindow* ui)
